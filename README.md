@@ -1,4 +1,4 @@
-# Evan Villeneuve, portfolio
+# My portfolio
 
 A one-page portfolio in plain HTML, CSS and JavaScript. This was designed to make adding new projects and assets as easy as possible for myself.
 ```
