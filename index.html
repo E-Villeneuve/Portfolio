@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>EV's portfolio</title>
+  <meta name="theme-color" content="#0d0b14">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%232a0a52'/%3E%3Ctext x='5' y='22' font-family='monospace' font-weight='700' font-size='15' fill='%23ff5ce1'%3E%3E_%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script>document.documentElement.classList.add('js')</script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <nav class="nav wrap" aria-label="Main">
+      <a class="wordmark mono" href="#top"><span class="prompt" aria-hidden="true">~/</span>evan-villeneuve<span class="caret" aria-hidden="true"></span></a>
+      <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <a class="button button-small" href="mailto:evilleneuve23@gmail.com?subject=Hello%20Evan">Email me</a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <!-- Hero -->
+    <section class="hero wrap" id="top" aria-labelledby="hero-title">
+      <div class="hero-text">
+        <p class="status mono" data-reveal><span class="dot" aria-hidden="true"></span>UofT CompSci, class of 2025</p>
+        <h1 id="hero-title" data-reveal style="--i:1">Evan <span class="hero-name-accent">Villeneuve</span></h1>
+        <p class="hero-role" data-reveal style="--i:2">Canadian Software Engineer</p>
+        <div class="hero-actions" data-reveal style="--i:3">
+          <a class="button" href="#projects">See my projects</a>
+          <a class="button button-ghost" href="mailto:evilleneuve23@gmail.com?subject=Hello%20Evan">Email me</a>
+        </div>
+      </div>
+
+      <!-- Interactive terminal: driven by js/main.js, with a plain fallback -->
+      <div class="terminal" data-reveal style="--i:2">
+        <div class="terminal-bar">
+          <span class="lights" aria-hidden="true"><i></i><i></i><i></i></span>
+          <span class="mono">evan@portfolio: ~</span>
+        </div>
+        <div class="terminal-body mono" id="terminal-output" aria-live="polite">
+          <p><span class="t-prompt">$</span><span class="t-cmd">whoami</span></p>
+          <p>Evan Villeneuve, software engineer in Oakville, Ontario.</p>
+        </div>
+        <form class="terminal-input mono" id="terminal-form" hidden>
+          <label for="terminal-command"><span class="t-prompt">$</span><span class="sr-only">Type a command</span></label>
+          <input id="terminal-command" name="command" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="type help">
+        </form>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section class="section wrap" id="about" aria-labelledby="about-title">
+      <header class="section-head" data-reveal>
+        <span class="section-path mono">01 / about</span>
+        <h2 id="about-title">About</h2>
+      </header>
+      <div class="about-grid">
+        <div class="about-text" data-reveal>
+          <p>Hello! My name is Evan. I'm a young (24 is young!) developer currently living in the Greater Toronto Area.</p>
+          <p>I have a healthy mixture of academic, personal, and professional experience across multiple languages and frameworks. I studied CS & Mathematics at the University of Toronto. I enjoy
+            challenging myself and have a strong independent work ethic, but am more than happy to educate or collaborate with others when given the opportunity.
+          </p>
+        </div>
+        <dl class="facts" data-reveal style="--i:1">
+          <div><dt class="mono">location</dt><dd>Oakville, Ontario</dd></div>
+          <div><dt class="mono">education</dt><dd>HBSc, computer science, minor in mathematics, University of Toronto</dd></div>
+          <div><dt class="mono">graduated</dt><dd>April 2025</dd></div>
+          <div><dt class="mono">focus</dt><dd>Backend, systems, networking, data</dd></div>
+        </dl>
+      </div>
+
+      <ol class="timeline" role="list" data-reveal style="--i:2">
+        <li>
+          <span class="when mono">2025 – now</span>
+          <div>
+            <h3>Freelance software data analyst, DataAnnotation</h3>
+            <p>I write challenging prompts and full repositories in Python, C and Java for AI coding agents using a variety of frameworks, then review and correct their outputs.</p>
+          </div>
+        </li>
+        <li>
+          <span class="when mono">2023</span>
+          <div>
+            <h3>Software engineering intern, Aversan</h3>
+            <p>My first foray into embedded engineering, my main focus was writing CAN bus firmware in C and developing unit tests in Python. I also built a concurrent test-data pipeline into PostgreSQL and a .docx / .pdf comment extractor.</p>
+          </div>
+        </li>
+        <li>
+          <span class="when mono">2020 – 2025</span>
+          <div>
+            <h3>HBSc, computer science, University of Toronto</h3>
+            <p>Minor in mathematics.</p>
+          </div>
+        </li>
+      </ol>
+    </section>
+
+    <!-- Skills: built from js/data.js -->
+    <section class="section wrap" id="skills" aria-labelledby="skills-title">
+      <header class="section-head" data-reveal>
+        <span class="section-path mono">02 / skills</span>
+        <h2 id="skills-title">Skills</h2>
+        <p class="section-note">Some of my skills are demonstrated in multiple projects! Pick one to see those projects.</p>
+      </header>
+      <div class="skill-groups" id="skill-groups"></div>
+      <noscript><p>Python, C, C#, C++, Java, JavaScript, HTTP, REST, SQL, PostgreSQL, Redis, AWS, Django, Flask, FastAPI, React, PyTorch, TensorFlow.</p></noscript>
+    </section>
+
+    <!-- Projects: built from js/data.js -->
+    <section class="section wrap" id="projects" aria-labelledby="projects-title">
+      <header class="section-head" data-reveal>
+        <span class="section-path mono">03 / projects</span>
+        <h2 id="projects-title">Projects</h2>
+      </header>
+      <div class="filter" data-reveal>
+        <div class="filter-chips" id="filter-chips" role="group" aria-label="Filter projects by skill"></div>
+        <p class="filter-status mono" id="filter-status" aria-live="polite"></p>
+      </div>
+      <div class="project-grid" id="project-grid"></div>
+      
+    </section>
+
+    <!-- Contact -->
+    <section class="section wrap contact" id="contact" aria-labelledby="contact-title">
+      <header class="section-head" data-reveal>
+        <span class="section-path mono">04 / contact</span>
+        <h2 id="contact-title">Contact Me!</h2>
+        <p class="section-note">Feel free to add me on LinkedIn or shoot me an email. While I still have your attention, make sure you grab a copy of my résumé!</p>
+      </header>
+      <div class="contact-card" data-reveal style="--i:1">
+        <a class="contact-email mono" href="mailto:evilleneuve23@gmail.com?subject=Hello%20Evan">evilleneuve23@gmail.com</a>
+        <button class="button button-ghost button-small" type="button" id="copy-email" data-email="evilleneuve23@gmail.com">Copy</button>
+      </div>
+      <ul class="contact-links" role="list" data-reveal style="--i:2">
+        <li><a href="https://www.linkedin.com/in/evan-villeneuve-691055274/" target="_blank" rel="me noopener"><span class="mono">LinkedIn</span><span>Evan Villeneuve</span><span class="arrow" aria-hidden="true">↗</span></a></li>
+        <li><a href="https://github.com/E-Villeneuve" target="_blank" rel="me noopener"><span class="mono">GitHub</span><span>E-Villeneuve</span><span class="arrow" aria-hidden="true">↗</span></a></li>
+        <li><a href="assets/Evan_Villeneuve_resume.pdf"><span class="mono">résumé</span><span>PDF</span><span class="arrow" aria-hidden="true">↓</span></a></li>
+
+        <li><span class="contact-static"><span class="mono">location</span><span>Oakville, Ontario</span></span></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="site-footer wrap">
+    <p>2026 Evan Villeneuve</p>
+  </footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
