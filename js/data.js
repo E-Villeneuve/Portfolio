@@ -56,6 +56,17 @@ window.PORTFOLIO = {
       imageAlt: '',
     },
     {
+      id: 'mic-mixer',
+      name: 'Voice & Soundboard Mixer',
+      context: '',
+      summary:
+        'A virtual soundboard built in Python, allowing users to combine their voice and audio files into a single output stream. Also supports (optional) local noise suppression via RNNoise.',
+      skills: ['Python', 'Concurrency', 'Neural networks', 'Memory Management'],
+      links: { code: 'https://github.com/E-Villeneuve/Audio-Mixer', demo: '' },
+      image: 'assets/mic-mixer.png',
+      imageAlt: '',
+    },
+    {
       id: 'c-shell',
       name: 'C shell',
       context: 'Personal project',
