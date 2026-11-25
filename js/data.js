@@ -13,6 +13,10 @@
     image      path to a screenshot, e.g. "assets/projects/proxy.png". Optional.
                When set it replaces the code fragment.
     imageAlt   describe the screenshot for screen readers.
+    video      path to an .mp4 (H.264), e.g. "assets/my-app.mp4". Optional.
+               When set it replaces the image and the code fragment. Plays muted on a loop.
+    poster     still image shown before the video loads. Optional but recommended.
+    videoAlt   describe what the video shows, for screen readers.
     fragment   a small code or terminal sample shown beside the text. Optional.
                { title: "...", kind: "terminal" | "code", lines: ["...", "..."] }
                In a terminal, lines starting with "$ " are shown as commands.
@@ -46,12 +50,12 @@ window.PORTFOLIO = {
       id: 'proxy-server',
       name: 'Python proxy server',
       context: 'Personal project',
-      figure: '60%',
+      figure: '95%',
       figureText: 'lower average response time, at best, once pages came from the local cache instead of upstream.',
       summary:
-        'A single-threaded HTTP proxy that serves many local connections at once with an event-driven design. Pages are cached locally with a time-to-live you configure, so repeat requests never leave the machine.',
+        'A caching HTTP proxy that serves many local connections at once. Pages are cached locally with a time-to-live you configure, so repeat requests never leave the machine.',
       skills: ['Python', 'HTTP', 'Networking', 'Concurrency'],
-      links: { code: '', demo: '' },
+      links: { code: 'https://github.com/E-Villeneuve/PyProxy', demo: '' },
       image: '',
       imageAlt: '',
     },
